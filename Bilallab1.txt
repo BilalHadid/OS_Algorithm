@@ -1,0 +1,44 @@
+#include<stdio.h>
+#include<math.h>
+void main()
+{
+	int b;
+	printf("eNTER VALE B");
+	scanf("%d", &b);
+	
+	int a;
+	printf("enter value of A");
+	scanf("%d" ,&a);
+	
+	int c;
+	printf("enter value of c");
+	scanf("%d" ,&c);
+	
+	
+	float d = b*b/2*a;
+	
+	int root1;
+	int root2;
+	if(d > 0){
+		int root1 = (- b + sqrt(b - 4*a*c) )/ 2*a;
+		int root2 = (- b - sqrt(b - 4*a*c) )/ 2*a;
+		printf("First Condition %d",root1);
+		printf("First Condition %d",root2);
+	}
+	else if(d == 0){
+		root1 = root2;
+		root2 = - b / 2*a;
+		printf("Equal condition %d",root2);
+	}
+	else if(d < 0){
+		int root1 = (- b / 2*a)+3.142*(sqrt(b-4*a*c)/2*a);
+		int root2 = (- b / 2*a)+3.142*(sqrt(b-4*a*c)/2*a);
+		printf("it is less than 0 %d",root1);
+		printf("it is less than 0 %d",root2);
+	}
+	else{
+		printf("all are not match");
+	}
+	
+	
+}
